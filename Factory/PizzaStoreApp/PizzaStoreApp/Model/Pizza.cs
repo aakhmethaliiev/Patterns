@@ -1,26 +1,26 @@
 ﻿using System;
-using System.Collections;
+using PizzaStoreApp.Ingredients.Cheeses;
+using PizzaStoreApp.Ingredients.Clams;
+using PizzaStoreApp.Ingredients.Doughs;
+using PizzaStoreApp.Ingredients.Pepperonies;
+using PizzaStoreApp.Ingredients.Sauces;
+using PizzaStoreApp.Ingredients.Veggies;
 
 namespace PizzaStoreApp.Model
 {
     public abstract class Pizza
     {
-        protected string Dough;
-        protected string Sauce;
-        protected ArrayList Toppings = new ArrayList();
-        protected string Name;
+        public string Name { get; set; }
 
-        public virtual void Preapre()
-        {
-            Console.WriteLine("Preparing " + Name);
-            Console.WriteLine("Tossing dough... ");
-            Console.WriteLine("Adding sauce... ");
-            Console.WriteLine("Adding toppings: ");
-            foreach (var t in Toppings)
-            {
-                Console.WriteLine("  " + t);
-            }
-        }
+        protected IDough Dough;
+        protected ISauce Sauce;
+        protected ICheese Cheese;
+        protected IPepperoni Pepperoni;
+        protected IClams Clam;
+        
+        protected IVeggies[] Toppings;
+
+        public abstract void Preapre();
 
         public virtual void Bake()
         {
@@ -37,6 +37,5 @@ namespace PizzaStoreApp.Model
             Console.WriteLine("Place pizza in official PizzaStore box");
         }
 
-        public string GetName => Name;
     }
 }

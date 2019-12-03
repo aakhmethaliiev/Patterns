@@ -37,10 +37,25 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ChicagoStyleCheesePizza.cs" />
-    <Compile Include="Model\NyStyleCheesePizza.cs" />
+    <Compile Include="Ingredients\Clams\FreshClams.cs" />
+    <Compile Include="Ingredients\Veggies\Garlic.cs" />
+    <Compile Include="Ingredients\Sauces\MarinaraSauce.cs" />
+    <Compile Include="Ingredients\Veggies\Mushroom.cs" />
+    <Compile Include="IngredientsFactories\NyPizzaIngredientFactory.cs" />
+    <Compile Include="Ingredients\Veggies\Onion.cs" />
+    <Compile Include="Ingredients\Veggies\RedPepper.cs" />
+    <Compile Include="Ingredients\Cheeses\ReggianoCheese.cs" />
+    <Compile Include="Ingredients\Pepperonies\SlicedPepperoni.cs" />
+    <Compile Include="Ingredients\Doughs\ThinCrustDough.cs" />
+    <Compile Include="Ingredients\Cheeses\ICheese.cs" />
+    <Compile Include="Ingredients\Clams\IClams.cs" />
+    <Compile Include="Ingredients\Doughs\IDough.cs" />
+    <Compile Include="IngredientsFactories\IPizzaIngredientFactory.cs" />
+    <Compile Include="Ingredients\Pepperonies\IPepperoni.cs" />
+    <Compile Include="Ingredients\Sauces\ISauce.cs" />
+    <Compile Include="Ingredients\Veggies\IVeggies.cs" />
+    <Compile Include="Model\CheesePizza.cs" />
     <Compile Include="Model\Pizza.cs" />
-    <Compile Include="PizzaStores\ChicagoPizzaStore.cs" />
     <Compile Include="PizzaStores\NyPizzaStore.cs" />
     <Compile Include="PizzaStores\PizzaStore.cs" />
     <Compile Include="Program.cs" />

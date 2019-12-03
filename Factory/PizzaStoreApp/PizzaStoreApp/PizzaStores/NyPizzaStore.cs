@@ -1,4 +1,5 @@
-﻿using PizzaStoreApp.Model;
+﻿using PizzaStoreApp.IngredientsFactories;
+using PizzaStoreApp.Model;
 
 namespace PizzaStoreApp.PizzaStores
 {
@@ -6,13 +7,16 @@ namespace PizzaStoreApp.PizzaStores
     {
         protected override Pizza CreatePizza(string type)
         {
+            Pizza pizza = null;
             switch (type)
             {
                 case "cheese":
-                    return new NyStyleCheesePizza();
+                    pizza = new CheesePizza(new NyPizzaIngredientFactory());
+                    pizza.Name = "New York Style Cheese Pizza";
+                    break;
             }
 
-            return null;
+            return pizza;
         }
     }
 }

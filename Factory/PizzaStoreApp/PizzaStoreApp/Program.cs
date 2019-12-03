@@ -8,14 +8,10 @@ namespace PizzaStoreApp
         private static void Main()
         {
             PizzaStore nyStore = new NyPizzaStore();
-            PizzaStore chicagoStore = new ChicagoPizzaStore();
 
             var pizza = nyStore.OrderPizza("cheese");
-            Console.WriteLine($"Ethan ordered a {pizza.GetName}\n");
-
-            pizza = chicagoStore.OrderPizza("cheese");
-            Console.WriteLine($"Joel ordered a {pizza.GetName}\n");
-
+            Console.WriteLine($"Ethan ordered a {pizza.Name}\n");
+            
             Console.ReadKey();
         }
     }
