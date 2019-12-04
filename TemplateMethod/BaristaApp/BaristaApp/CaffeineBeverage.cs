@@ -14,14 +14,14 @@ namespace BaristaApp
 
         protected abstract void AddCondiments();
 
-        public void PourInCup()
+        private void PourInCup()
         {
             Console.WriteLine("Pouring into cup");
         }
 
         protected abstract void Brew();
 
-        public void BoilWater()
+        private void BoilWater()
         {
             Console.WriteLine("Boiling water");
         }
