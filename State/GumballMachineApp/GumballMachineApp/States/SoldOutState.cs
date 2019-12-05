@@ -1,8 +1,10 @@
-﻿namespace GumballMachineApp.States
+﻿using System;
+
+namespace GumballMachineApp.States
 {
     public class SoldOutState : IState
     {
-        private GumballMachine _gumballMachine;
+        private readonly GumballMachine _gumballMachine;
 
         public SoldOutState(GumballMachine gumballMachine)
         {
@@ -11,22 +13,27 @@
 
         public void InsertQuarter()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You can't insert a quarter, the machine is sold out");
         }
 
         public void EjectQuarter()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You can't eject, you haven't iserted a quarter yet");
         }
 
         public void TurnCrank()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You turned, but there are no gumballs");
         }
 
         public void Dispense()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("No gumball dispensed");
+        }
+
+        public override string ToString()
+        {
+            return "Sold out";
         }
     }
 }

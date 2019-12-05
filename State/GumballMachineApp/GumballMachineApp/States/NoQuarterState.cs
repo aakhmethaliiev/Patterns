@@ -1,32 +1,35 @@
-﻿namespace GumballMachineApp.States
+﻿using System;
+
+namespace GumballMachineApp.States
 {
     public class NoQuarterState : IState
     {
-        private GumballMachine _gumballMachine;
+        private readonly GumballMachine _gumballMachine;
 
         public NoQuarterState(GumballMachine gumballMachine)
         {
             _gumballMachine = gumballMachine;
         }
         
-        public void InsertQuater()
+        public void InsertQuarter()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You inserted a quarter");
+            _gumballMachine.State = _gumballMachine.HasQuarterState;
         }
 
-        public void EjectQuater()
+        public void EjectQuarter()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You haven't inserted a quarter");
         }
 
         public void TurnCrank()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You turned, but there's no quarter");
         }
 
         public void Dispense()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine("You need to pay first");
         }
     }
 }

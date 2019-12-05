@@ -9,12 +9,12 @@
             _gumballMachine = gumballMachine;
         }
 
-        public void InsertQuater()
+        public void InsertQuarter()
         {
             throw new System.NotImplementedException();
         }
 
-        public void EjectQuater()
+        public void EjectQuarter()
         {
             throw new System.NotImplementedException();
         }
